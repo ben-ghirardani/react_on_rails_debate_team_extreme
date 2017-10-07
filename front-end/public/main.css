@@ -1,0 +1,15 @@
+.card-tray {
+    background-color: lightblue;
+    position: absolute;
+    width: 800px;
+    height: 210px;
+    bottom: 15px;
+    left: auto;
+    right: auto;
+}
+
+.card {
+    height: 150px;
+    width: 50px;
+    background-color: darkblue;
+}

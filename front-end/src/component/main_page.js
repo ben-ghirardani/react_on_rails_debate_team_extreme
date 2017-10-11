@@ -1,11 +1,16 @@
 import React from 'react';
 
+
 class MainPage extends React.Component {
 
     render() {
+
         return(
             <div> 
-                This is the main page
+                this is the main page
+                <select id="choose-team">
+
+                </select>
             </div>
         )
     }

@@ -35,7 +35,7 @@ class App extends React.Component {
   
   render() {
     return (
-      <MainPage/>
+      <MainPage characters={this.state.characters} />
     );
   }
 }

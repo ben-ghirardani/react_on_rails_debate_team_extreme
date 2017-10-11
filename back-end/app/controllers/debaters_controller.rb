@@ -25,6 +25,7 @@ def update
         render :json => debater
     else
         render :json => { status: :update_failed }
+    end
 end
 
 def destroy
@@ -33,6 +34,7 @@ def destroy
         render :json => { status: :success }
     else 
         render :json => { status: :delete_failed }
+    end
 end
 
 end

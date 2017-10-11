@@ -1,15 +1,37 @@
 .card-tray {
     background-color: lightblue;
     position: absolute;
-    width: 800px;
+    width: 200px;
     height: 210px;
-    bottom: 15px;
+    /* bottom: 15px;
     left: auto;
-    right: auto;
+    right: auto; */
+} 
+
+.tray-one {
+    background-color: lightblue;
+    width: 200px;
+    height: 210px;        
+}
+
+.tray-two {
+    background-color: darkgoldenrod;
+    width: 200px;
+    height: 210px;        
+}
+
+.tray-three {
+    background-color: black;
+    width: 200px;
+    height: 210px;        
 }
 
 .card {
     height: 150px;
     width: 50px;
     background-color: darkblue;
+}
+
+.card-trays {
+    display: flex;
 }

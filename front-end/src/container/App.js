@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-import CardTray from '../component/card_tray'
+import React from 'react';
+import MainPage from '../component/main_page';
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 
-class App extends Component {
+
+
+class App extends React.Component {
   
   constructor(props){
     super(props);
     this.state = {
-        // gets updated with seed data from back-end when componentDidMount gets called.
         characters: []
     }
   }
@@ -36,11 +38,8 @@ class App extends Component {
   
   render() {
     return (
-      // might need to change "main page" as I expand the scope of the app, as this will
-      // no longer be the main page.
-      <div className="main-page">
-        <CardTray characters={ this.state.characters } />
-      </div>
+      <Router history={} >
+      </Router>
     );
   }
 }

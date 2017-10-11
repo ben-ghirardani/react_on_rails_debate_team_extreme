@@ -5,7 +5,7 @@ class PickTeam extends React.Component {
     render() {
         return(
             <section>
-            
+            this is pick team
             </section>
         )
     }

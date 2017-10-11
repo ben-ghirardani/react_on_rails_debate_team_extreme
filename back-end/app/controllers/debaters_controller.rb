@@ -1,19 +1,38 @@
 class DebatersController < ApplicationController
 
+def debater_params
+    params.require(:debater).permit( [ :name, :debate ] )
+end
+
 def index
-    @debaters = [ 
-        { name: "Dave", debate: 7 }, 
-        { name: "Sarah", debate: 8 }, 
-        { name: "Edward", debate: 6 }, 
-        { name: "Lauren", debate: 9 },
-        { name: "Jeremy", debate: 8 },
-        { name: "Mary", debate: 5 },
-        { name: "John", debate: 7 },
-        { name: "Katie", debate: 8 },
-        { name: "Clive", debate: 3 },
-        { name: "Claire", debate: 4 } 
-    ]
+    @debaters = Debater.all
     render :json => @debaters
+end
+
+def show
+    debater = Debater.find(params[:id])
+    render :json => debater
+end
+
+def create
+    debater = Debater.create( animal_params )
+    render :json => debater
+end
+
+def update
+    debater = Debater.find( params[:id] )
+    if debater.update_attributers( debater_params )
+        render :json => debater
+    else
+        render :json => { status: :update_failed }
+end
+
+def destroy
+    animal = Animal.find( params[:id] )
+    if animal.destroy!
+        render :json => { status: :success }
+    else 
+        render :json => { status: :delete_failed }
 end
 
 end

@@ -1,8 +1,5 @@
 import React from 'react';
 import MainPage from '../component/main_page';
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
-
-
 
 class App extends React.Component {
   
@@ -38,8 +35,7 @@ class App extends React.Component {
   
   render() {
     return (
-      <Router history={} >
-      </Router>
+      <MainPage/>
     );
   }
 }
